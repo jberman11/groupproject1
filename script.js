@@ -55,4 +55,3 @@ function checkfirebase(id1, id2, id3) {//paramaters are DOM id strings
 
 
 
-}
