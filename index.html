@@ -1,15 +1,81 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <title>Semantic UI CDN</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
-    <link rel="stylesheet" href="/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.10/dist/semantic.min.js"></script>
-    <script src="/script.js"></script>
+    <title> Guide 2 GameDay </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<header>
+    <nav class="navbar navbar-toggleable-md bg-faded">
+        <div>
+            <p class="navbar-brand"> Guide 2 GameDay! </p>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" placeholder="Search Your School" id="userInput">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton"> Search</button>
+            </form>
+        </div>
+    </nav>
+</header>
 
+<body>
+    <div class="container">
+        <div class="row" id="geoInfo">
+            <div class="col-md-6">
+                <div class="card">
+                    <h3 class="card-header" id="stadiumName "> Stadium Name </h3>
+                    <div class="card-block">
+                        <h4 class="card-title" id="cityState"> City, State </h4>
+                        <p class="card-text" id="streetAddress"> Street Address, Zip </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="weatherInfo">
+                <div class="card">
+                    <h3 class="card-header"> Weather </h3>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div id="weatherCity">
+                                </div>
+                                <div id="weatherTemp">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="weatherIcon">
+                                </div>
+                                <div id="weatherCondition">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="toDoInfo">
+            <div class="col-md-12">
+                <div class="card">
+                    <h3 class="card-header"> Featured</h3>
+                    <div class="card-block">
+                        <h4 class="card-title"> Special title treatment </h4>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
 </html>
