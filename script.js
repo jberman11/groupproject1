@@ -1,3 +1,4 @@
+
 var city = "";
 
 function getWeather() {
@@ -36,3 +37,4 @@ function weatherReturn(q) {
         console.log(response)
     });
 }
+
