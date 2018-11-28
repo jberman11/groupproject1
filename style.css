@@ -6,7 +6,15 @@ header {
 }
 .card {
     height: 200px;
+    display: none;
+    border: hidden;
+    margin: 30px;
 }
 #geoInfo {
     margin-top: 50px;
+}
+
+#teamLocals {
+    background-color: black;
+    color: white;
 }
