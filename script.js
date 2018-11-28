@@ -54,6 +54,10 @@ function weatherReturn(q) {
         } else if (q === "ames") {
             $("body").css("background-color", "#C8102E");
             $("body").css("color", "#F1BE48");
+            var tLogo = $("<img>");
+            tLogo.attr("src", "assets/images/baylor_bears.png");
+            tLogo.attr("alt", "University of Baylor Team Logo");
+            $("#teamLogo").html(tLogo);
             $("nav").css("background-color", "#F1BE48");
             $("nav").css("color", "#C8102E");
             $(".card-header").css("background-color", "#F1BE48");
