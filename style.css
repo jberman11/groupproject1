@@ -18,3 +18,9 @@ header {
     background-color: black;
     color: white;
 }
+
+/* maps api styling */
+#map {
+    height: 400px;
+    width: 100%;  
+    }

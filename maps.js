@@ -1,6 +1,7 @@
 ///////////
+var obj = {lat:30.2837, lng:-97.7325}
 function initMap() {
-    var uluru = {lat:30.2837, lng:-97.7325}; //hard coding the lat and lng of a location
+    var uluru =obj; //hard coding the lat and lng of a location
     var map = new google.maps.Map(document.getElementById('map'), {zoom: 8, center: uluru}); //gets the map to display on the html page
     var marker = new google.maps.Marker({position: uluru, map: map}); //adds a marker to the map
 }
