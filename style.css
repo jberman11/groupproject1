@@ -5,6 +5,7 @@ header {
 
 .navbar-brand {
     float: left;
+    padding-top: 15px;
 }
 .card {
     height: 200px;
