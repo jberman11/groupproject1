@@ -209,3 +209,18 @@ var placeSearch, autocomplete;
         console.log(response.results[0].geometry.location.lat,response.results[0].geometry.location.lng)
         })
     }  
+        $("#userInput").keypress(function(event){
+            var inputValue = event.which;
+            // allow letters and whitespaces only for userInput text box, user validation
+            if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) { 
+                event.preventDefault(); 
+            }
+        });
+        $("#schoolName").keypress(function(event){
+            var inputValue = event.which;
+            // allow letters and whitespaces only for schoolName text box, user validation
+            if(!(inputValue >= 65 && inputValue <= 120) && (inputValue != 32 && inputValue != 0)) { 
+                event.preventDefault(); 
+            }
+        });
+    
