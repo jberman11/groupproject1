@@ -7,24 +7,34 @@
     <title> Guide 2 GameDay </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" id="stylesheet1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <header>
     <nav class="navbar navbar-toggleable-md bg-faded">
-        <div>
+        <div class="container"> 
             <p class="navbar-brand"> Search by City </p>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" placeholder="Search Your School's City" id="userInput">
                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton"> Search</button>
             </form>
-        </div>
+            <button class="btn btn-outline-dark my-2 my-sm-0 addSchool" type="text">Add Your School</button>
+            <div id="locationField" class="row">
+                <div class="col-4">
+                <input id="schoolName" class="form-control mr-sm-2" type="text" placeholder="School name"></input></div>
+                <div class="col-4">
+                <input id="autocomplete" class="form-control mr-sm-2" placeholder="Enter your address"
+                       onFocus="geolocate()" type="text"></input></div>
+                       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton2">Submit</button>
+              </div>
+        <span id="teamLogo"></span>
+    </div>
     </nav>
 </header>
 
 <body>
 
-        <div class="jumbotron" id="teamLocals"> 
+        <div class="jumbotron" id="teamLocals">  
             <h1 class="display-3"> Guide 2 Gameday </h1> 
                 <p class="lead"> Search your BIG12 school by city to find relevant gameday information, below is a list of BIG12 schools by city. </p> 
                 <hr class="my-2">
@@ -45,43 +55,42 @@
         <div class="row" id="geoInfo">
             <div class="col-md-6">
                 <div class="card">
-                    <h3 class="card-header" id="stadiumName "> Stadium Name </h3>
+                    <h3 class="card-header" id="stadiumName "> This is the Auto complete form  </h3>
                     <div class="card-block">
-                        <h4 class="card-title" id="cityState"> City, State </h4>
-                        <p class="card-text" id="streetAddress"> Street Address, Zip </p>
+                        <h4 class="card-title" id="cityState"> Auto Complete Form </h4>
+                        <p class="card-text" id="streetAddress"> Auto Complete Form  </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6" id="weatherInfo">
                 <div class="card">
-                    <h3 class="card-header"> Weather </h3>
                     <div class="card-block">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div id="weatherCity">
+                            <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="row"> <h1><span id="weatherCity"></span></h1> </div>
+                                    <div class="row" id="weatherContent">
+                                        <em><div id="weatherCondition"></div></em>
+                                        <div id="weatherIcon"></div>
+                                    </div>
+                                    <div class="row"><h3><div id="weatherTemp"></div></h3></div>
                                 </div>
-                                <div id="weatherTemp">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div id="weatherIcon">
-                                </div>
-                                <div id="weatherCondition">
-
-                                </div>
-                            </div>
+                            <div class="col-md-3"></div>
+                        
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br><br><br><br><br><br>
+        <hr> <hr>
         <div class="row" id="toDoInfo">
             <div class="col-md-12">
                 <div class="card">
-                    <h3 class="card-header"> Featured</h3>
+                    <h3 class="card-header"> Map </h3>
                     <div class="card-block">
-                        <h4 class="card-title"> Special title treatment </h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <h4 class="card-title"> This is where the Map will go </h4>
+                        <p class="card-text"> This is where the map will go </p>
                     </div>
                 </div>
             </div>
@@ -99,6 +108,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
   <script src="firebase.js"></script>
   <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg_CHeuK0q04kQkP6OAYwFhmRn0zpPhIs&libraries=places&callback=initAutocomplete" async defer></script>
 
 
 </html>
