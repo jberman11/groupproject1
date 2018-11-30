@@ -1,5 +1,46 @@
 
-var city = "";
+var schools = {
+    austin: {
+        lat : 30.28368,
+        lng : -97.73360749999999,
+    },
+    norman: {
+        lat:35.2058508,
+        lng:-97.44231620000001,
+    },
+    ames: {
+        lat:42.0162157,
+        lng:-93.6345331,
+    },
+    morgantown: {
+        lat:9.6489012 ,
+        lng:-79.9539248,
+    },
+    "fort worth":{
+        lat:32.7097444 ,
+        lng:-97.3682427,
+    },
+    waco:{
+        lat:31.5581942 ,
+        lng:-97.1149085,
+    },
+    manhattan:{
+        lat:39.2030135 ,
+        lng:-96.59389089999999,
+    },
+    lubbock:{
+        lat:33.5912701 ,
+        lng:-101.8728718,
+    },
+    stillwater:{
+        lat:36.1257008 ,
+        lng:-97.06634460000001,
+    },
+    lawerence:{
+        lat:32.8015479,
+        lng: -96.84638869999999,
+    },
+};
 
 function getWeather() {
     var city = $("#userInput").val().trim()
