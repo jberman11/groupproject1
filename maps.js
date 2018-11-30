@@ -1,15 +1,15 @@
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('maps'), {
       zoom: 16,
-      center: schools.city
+      center: {lat:30, lng: -90}
     });
 
     marker = new google.maps.Marker({
       map: map,
       draggable: false,
       animation: google.maps.Animation.DROP,
-      position: schools.city 
+      position: {lat:30, lng: -90} 
     });
     marker.addListener('click', toggleBounce);
   }

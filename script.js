@@ -52,6 +52,7 @@ $("#searchButton").on("click", function() {
     var school = $("#userInput").val().trim();
     school = school.toLowerCase();
     $(".card").css("display","initial");
+    
     $("#teamLocals").hide();
     getWeather();
 
@@ -143,7 +144,8 @@ $("#searchButton").on("click", function() {
         $("#teamLocals").append(eMessageBox);
         $("#teamPicture").remove();
     };
-    
+    $("#maps").attr("height", "200px")
+    $("#maps").attr("width","200px")
 })
 
 function weatherReturn(q) {

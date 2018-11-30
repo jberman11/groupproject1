@@ -27,7 +27,10 @@ hr {
     border: hidden;
     margin: 30px;
 }
-
+#maps {
+    height:500px;
+    width:500px;
+}
 
 #weatherPic {
     height: 35px;

@@ -53,16 +53,8 @@
         </div>
     <div class="container">
         <div class="row" id="geoInfo">
-            <div class="col-md-6">
-                <div class="card">
-                    <h3 class="card-header" id="stadiumName "> This is the Auto complete form  </h3>
-                    <div class="card-block">
-                        <h4 class="card-title" id="cityState"> Auto Complete Form </h4>
-                        <p class="card-text" id="streetAddress"> Auto Complete Form  </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6" id="weatherInfo">
+           
+            <div class="col-md-3" id="weatherInfo">
                 <div class="card">
                     <div class="card-block">
                         <div class="row">
@@ -81,18 +73,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row" id="maps">  <!-- id for the maps api -->
-            <div class="col-md-12">
-                <div class="card">
-                    <h3 class="card-header"> Map </h3>
-                    <div class="card-block">
-                        <h4 class="card-title"> This is where the Map will go </h4>
-                        <p class="card-text"> This is where the map will go </p>
-                    </div>
-                </div>
+            <div class= "col-7"id="maps">  <!-- id for the maps api -->
+            
             </div>
         </div>
+        
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -106,7 +91,9 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
   <script src="firebase.js"></script>
   <script src="script.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg_CHeuK0q04kQkP6OAYwFhmRn0zpPhIs&libraries=places&callback=initAutocomplete" async defer></script>
-
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg_CHeuK0q04kQkP6OAYwFhmRn0zpPhIs&libraries=places&callback=initAutocomplete" async defer></script> -->
+  <script src="maps.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe5nhhitWSBh2wXf_8j9mABNu4hu2Er4M&callback=initMap"
+  async defer></script>
 
 </html>
