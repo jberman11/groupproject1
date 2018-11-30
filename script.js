@@ -127,4 +127,40 @@ function weatherReturn(q) {
         
     });
 }
+//this is the autocomplete text box
+$("#locationField").hide()
+var placeSearch, autocomplete;
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      };
+      $(".addSchool").on("click", function() {
+        $("#locationField").show()
+      })
+      function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
 
+      function fillInAddress() {
+        var place = autocomplete.getPlace();
+        console.log(autocomplete)
+        let newurl = place.url
+        let addresss = newurl.replace ("https://maps.google.com/?q=", "")
+        let add2 = addresss.replace("&ftid=0x865b5375c63082ad:0xdb303cb4e47ee4e8","")
+        console.log(add2)
+        queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address="+add2+"&key=AIzaSyCcLNf1UpaVT7gzHTDrXkLsnf07P-lHyl4"
+        console.log(queryURL)
+        $.ajax({
+        url: queryURL,
+        method: "GET"
+            }).then(function (response) {
+        console.log(response.results[0].geometry.location.lat,response.results[0].geometry.location.lng)
+        })
+    }  
