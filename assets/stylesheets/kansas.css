@@ -1,0 +1,56 @@
+body {
+    background-color: #0051BA;
+    color: #E8000D;
+}
+
+nav {
+    background-color: #E8000D;
+    color: #0051BA;
+}
+
+.card-header {
+    background-color: #E8000D;
+    color: #0051BA;
+}
+
+hr {
+    border: 1px solid #E8000D;
+}
+
+.navbar-brand {
+    float: left;
+}
+.card {
+    height: 200px;
+    border: hidden;
+    margin: 30px;
+}
+
+
+#weatherPic {
+    height: 35px;
+    width: 35px;
+}
+
+#geoInfo {
+    margin-top: 50px;
+}
+
+#teamLocals {
+    background-color: black;
+    color: white;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+
+#weatherContent, #weatherTemp {
+    margin-left: 7px;
+}
+
+#teamLogo {
+    margin-right: 45%;
+}

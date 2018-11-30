@@ -1,6 +1,8 @@
 header {
     background-color: darkgray;
 }
+
+
 .navbar-brand {
     float: left;
 }
@@ -10,6 +12,13 @@ header {
     border: hidden;
     margin: 30px;
 }
+
+
+#weatherPic {
+    height: 35px;
+    width: 35px;
+}
+
 #geoInfo {
     margin-top: 50px;
 }
