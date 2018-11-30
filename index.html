@@ -18,6 +18,15 @@
                 <input class="form-control mr-sm-2" placeholder="Search Your School's City" id="userInput">
                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton"> Search</button>
             </form>
+            <button class="btn btn-outline-dark my-2 my-sm-0 addSchool" type="text">Add Your School</button>
+            <div id="locationField" class="row">
+                <div class="col-4">
+                <input id="schoolName" class="form-control mr-sm-2" type="text" placeholder="School name"></input></div>
+                <div class="col-4">
+                <input id="autocomplete" class="form-control mr-sm-2" placeholder="Enter your address"
+                       onFocus="geolocate()" type="text"></input></div>
+                       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton2">Submit</button>
+              </div>
         <span id="teamLogo"></span>
     </div>
     </nav>
@@ -99,6 +108,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
   <script src="firebase.js"></script>
   <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg_CHeuK0q04kQkP6OAYwFhmRn0zpPhIs&libraries=places&callback=initAutocomplete" async defer></script>
 
 
 </html>
