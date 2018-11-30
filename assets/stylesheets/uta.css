@@ -56,6 +56,10 @@ img {
 #teamLogo {
     margin-right: 45%;
 }
+#maps {
+    height:500px;
+    width:500px;
+}
 
 @media (max-width: 990px) {
     #teamLogo {
