@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" id="stylesheet1">
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <header>
@@ -35,6 +36,7 @@
 <body>
 
         <div class="jumbotron" id="teamLocals">  
+            <div class="container">
             <h1 class="display-3"> Guide 2 Gameday </h1> 
                 <p class="lead"> Search your BIG12 school by city to find relevant gameday information, below is a list of BIG12 schools by city. </p> 
                 <hr class="my-2">
@@ -50,25 +52,20 @@
                     <strong>Texas Tech University</strong>: Lubbock, Texas <br>
                     <strong>West Virginia University</strong>: Morgantown, West Virginia <br>
                 </p> 
+            </div>
         </div>
     <div class="container">
         <div class="row" id="geoInfo">
-            <div class="col-md-6">
-                <div class="card">
-                    <h3 class="card-header" id="stadiumName "> This is the Auto complete form  </h3>
-                    <div class="card-block">
-                        <h4 class="card-title" id="cityState"> Auto Complete Form </h4>
-                        <p class="card-text" id="streetAddress"> Auto Complete Form  </p>
-                    </div>
-                </div>
+            <div class="col-md-3">
             </div>
             <div class="col-md-6" id="weatherInfo">
                 <div class="card">
                     <div class="card-block">
+            <div class="col-md-3"></div>
                         <div class="row">
                             <div class="col-md-3"></div>
                                 <div class="col-md-6">
-                                    <div class="row"> <h1><span id="weatherCity"></span></h1> </div>
+                                    <div class="row"> <span id="weatherCity"></span> </div>
                                     <div class="row" id="weatherContent">
                                         <em><div id="weatherCondition"></div></em>
                                         <div id="weatherIcon"></div>

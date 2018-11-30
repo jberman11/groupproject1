@@ -2,6 +2,10 @@ header {
     background-color: darkgray;
 }
 
+body {
+    background-color: black;
+}
+
 
 .navbar-brand {
     float: left;
@@ -40,4 +44,9 @@ img {
 
 #teamLogo {
     margin-right: 45%;
+}
+
+#emess {
+    font-style: italic;
+    border: 1px solid red;
 }

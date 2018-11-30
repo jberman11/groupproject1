@@ -113,8 +113,6 @@ function weatherReturn(q) {
         method: "GET"
     }).then(function (response) {
 
-        var eMessageBox;
-        var eMessage;
         var weatherIcon = $("<img>");
         weatherIcon.attr("id", "weatherPic")
         weatherIcon.attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
