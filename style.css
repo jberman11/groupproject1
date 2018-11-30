@@ -5,6 +5,7 @@ header {
 
 .navbar-brand {
     float: left;
+    padding-top: 15px;
 }
 .card {
     height: 200px;
@@ -28,16 +29,8 @@ header {
     color: white;
 }
 
-img {
-    height: 50px;
-    width: 50px;
-}
-
-
-#weatherContent, #weatherTemp {
-    margin-left: 7px;
-}
-
-#teamLogo {
-    margin-right: 45%;
-}
+/* maps api styling */
+#map {
+    height: 400px;
+    width: 100%;  
+    }

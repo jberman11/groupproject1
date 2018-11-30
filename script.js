@@ -55,6 +55,10 @@ $("#searchButton").on("click", function() {
     $("#teamLocals").hide();
     getWeather();
 
+    /*if/else to see if user input matches a big12 city, if so, changes style to school
+    themed by changing style sheet and adding school logo.
+     else it displays message that, that city is not a BIG12 school city and displays
+     list of city/school pairings. */
     if (school === "austin") {
         $("#stylesheet1").attr("href", "./assets/stylesheets/uta.css");
         var tLogo = $("<img>");
