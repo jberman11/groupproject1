@@ -19,9 +19,41 @@ hr {
 
 .navbar-brand {
     float: left;
+    margin: 0 auto;
 }
 .card {
     height: 200px;
+    border: hidden;
+    margin: 30px;
+}
+
+
+#weatherPic {
+    height: 35px;
+    width: 35px;
+}
+
+#geoInfo {
+    margin-top: 50px;
+}
+
+#teamLocals {
+    background-color: black;
+    color: white;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.navbar-brand {
+    float: left;
+    padding-top: 15px;
+}
+.card {
+    height: 200px;
+    display: none;
     border: hidden;
     margin: 30px;
 }
@@ -53,4 +85,15 @@ img {
 
 #teamLogo {
     margin-right: 45%;
+}
+
+#teamLogo {
+    margin-right: 45%;
+}
+
+@media (max-width: 990px) {
+    #teamLogo {
+        margin-right: 10%;
+        float: right;
+    }
 }
