@@ -9,6 +9,7 @@ function getWeather() {
 $("#searchButton").on("click", function() {
     event.preventDefault()
     var school = $("#userInput").val().trim();
+    school = school.toLowerCase();
     $(".card").css("display","initial");
     $("#teamLocals").hide();
     getWeather();
@@ -91,7 +92,7 @@ $("#searchButton").on("click", function() {
         eMessageBox.attr("id", "emess")
         eMessageBox.addClass("container");
         eMessage = $("<h1>");
-        eMessage.html("I'm sorry there is no BIG12 school in " + q + " ,please try your search again.");
+        eMessage.html("I'm sorry there is no BIG12 school in " + school + " ,please try your search again.");
         $("#teamLocals").show();
         $(eMessageBox).append(eMessage);
         $("#teamLocals").append(eMessageBox);
