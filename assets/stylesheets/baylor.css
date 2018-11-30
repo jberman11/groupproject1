@@ -1,14 +1,27 @@
-header {
-    background-color: darkgray;
+body {
+    background-color: #002419;
+    color: #fdba31;
 }
 
+nav {
+    background-color: #002419;
+    color: #fdba31;
+}
+
+.card-header {
+    background-color: #fdba31;
+    color: #002419;
+}
+
+hr {
+    border: 1px solid #fdba31;
+}
 
 .navbar-brand {
     float: left;
 }
 .card {
     height: 200px;
-    display: none;
     border: hidden;
     margin: 30px;
 }
