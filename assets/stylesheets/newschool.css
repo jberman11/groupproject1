@@ -1,20 +1,20 @@
 body {
-    background-color: #512888;
-    color: #A7A7A7;
+    background-color: white;
+    color: black;
 }
 
 nav {
-    background-color: #A7A7A7;
-    color: #512888;
+    background-color: black;
+    color: white;
 }
 
 .card-header {
-    background-color: #A7A7A7;
-    color: #512888;
+    background-color: black;
+    color: white;
 }
 
 hr {
-    border: 1px solid #A7A7A7;
+    border: 1px solid black;
 }
 
 .navbar-brand {
@@ -80,4 +80,29 @@ img {
 #addSchool {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+    background: black
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+    border: 1px solid white
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black; 
 }

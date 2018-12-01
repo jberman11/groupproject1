@@ -1,60 +1,64 @@
 
-var schools = {
-    austin: {
-        lat: 30.28368,
-        lng: -97.73360749999999,
-        school: "UT"
-    },
-    norman: {
-        lat: 35.2058508,
-        lng: -97.44231620000001,
-        school: "OU"
-    },
-    ames: {
-        lat: 42.0162157,
-        lng: -93.6345331,
-        school: "Iowa St"
-    },
-    morgantown: {
-        lat: 9.6489012,
-        lng: -79.9539248,
-        school: "WVU"
-    },
-    "fort worth": {
-        lat: 32.7097444,
-        lng: -97.3682427,
-        school: "TCU"
-    },
-    waco: {
-        lat: 31.5581942,
-        lng: -97.1149085,
-        school: "Baylor"
-    },
-    manhattan: {
-        lat: 39.2030135,
-        lng: -96.59389089999999,
-        school: "K-State"
-    },
-    lubbock: {
-        lat: 33.5912701,
-        lng: -101.8728718,
-        school: "Texas Tech"
-    },
-    stillwater: {
-        lat: 36.1257008,
-        lng: -97.06634460000001,
-        school: "OSU"
-    },
-    lawerence: {
-        lat: 32.8015479,
-        lng: -96.84638869999999,
-        school: "Kansas"
-    },
-    list: { working: true }
-};
+var schools = {}
+//     austin: {
+//         lat: 30.28368,
+//         lng: -97.73360749999999,
+//         school: "UT"
+//     },
+//     norman: {
+//         lat: 35.2058508,
+//         lng: -97.44231620000001,
+//         school: "OU"
+//     },
+//     ames: {
+//         lat: 42.0162157,
+//         lng: -93.6345331,
+//         school: "Iowa St"
+//     },
+//     morgantown: {
+//         lat: 9.6489012,
+//         lng: -79.9539248,
+//         school: "WVU"
+//     },
+//     "fort worth": {
+//         lat: 32.7097444,
+//         lng: -97.3682427,
+//         school: "TCU"
+//     },
+//     waco: {
+//         lat: 31.5581942,
+//         lng: -97.1149085,
+//         school: "Baylor"
+//     },
+//     manhattan: {
+//         lat: 39.2030135,
+//         lng: -96.59389089999999,
+//         school: "K-State"
+//     },
+//     lubbock: {
+//         lat: 33.5912701,
+//         lng: -101.8728718,
+//         school: "Texas Tech"
+//     },
+//     stillwater: {
+//         lat: 36.1257008,
+//         lng: -97.06634460000001,
+//         school: "OSU"
+//     },
+//     lawerence: {
+//         lat: 32.8015479,
+//         lng: -96.84638869999999,
+//         school: "Kansas"
+//     },
+//     list: { working: true }
+// };
 //to reset database use : database.ref("/-LSc934g9t_qnp53Al7j").set(schools)
 database.ref("/-LSc934g9t_qnp53Al7j").once("value", function (snap) {
     schools = snap.val()
+    for ( var city in schools){
+        if (city === "list"){}else{
+        makeButton(city)}
+    }
 })
 var reference = "-LSc934g9t_qnp53Al7j"
 
@@ -168,7 +172,8 @@ $("#searchButton").on("click", function () {
 })
 
 function weatherReturn(q) {
-    if (q = "manhattan") {
+    console.log(q)
+    if (q === "manhattan") {
         q = "manhattan,KS"
     }
 
@@ -181,9 +186,8 @@ function weatherReturn(q) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
+        console.log(response)
 
-        var eMessageBox;
-        var eMessage;
         var weatherIcon = $("<img>");
         weatherIcon.attr("id", "weatherPic")
         weatherIcon.attr("src", "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
@@ -304,14 +308,11 @@ $("#searchButton2").on("click", function (event) {
 
     if (!schools.list[newSchool]) {
         schools.list[newSchool] = true;
-        if (!schools[newCity]) {
+
             
             schools[newCity] = { lat: newLat, lng: newLng, school: newSchool }
             
-        } else { 
-            newCity = newCity + "*"
-            schools[newCity] = { lat: newLat, lng: newLng, school: newSchool }
-             }
+        
         
         let addToDataList = database.ref("/" + reference).set(schools)
         makeButton(newCity)
@@ -351,10 +352,13 @@ function makeButton(city){
 
 })}
 
-for ( var city in schools){
-    if (city === "list"){}else{
-    makeButton(city)}
-}
+
+
+
+
+
+
+
 
 function check (school){
     if (school === "austin") {
@@ -431,7 +435,7 @@ function check (school){
     } else {
         $("#stylesheet1").attr("href", "./assets/stylesheets/kansas.css");
         var tLogo = $("<img>");
-        tLogo.attr("src", "assets/images/kansas_jayhawks.png");
+        tLogo.empty()
         tLogo.attr("alt", "University of Kansas Team Logo");
         $("#teamLogo").empty
         $("#emess").remove();
