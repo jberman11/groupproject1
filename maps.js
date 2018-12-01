@@ -1,6 +1,6 @@
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('maps'), {
+    map = new google.maps.Map(document.getElementById('maps'), {
       zoom: 16,
       center: {lat:30, lng: -90}
     });
@@ -12,6 +12,7 @@ function initMap() {
       position: {lat:30, lng: -90} 
     });
     marker.addListener('click', toggleBounce);
+    initAutocomplete()
   }
 
   function toggleBounce() {
