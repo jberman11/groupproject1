@@ -11,32 +11,46 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <header>
+   
     <nav class="navbar navbar-toggleable-md bg-faded">
-        <div class="container"> 
-            <p class="navbar-brand"> Search by City </p>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" placeholder="Search Your School's City" id="userInput">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton"> Search</button>
-            </form>
-            <button class="btn btn-outline-dark my-2 my-sm-0 addSchool" type="text">Add Your School</button>
-            <div id="locationField" class="row">
-                <div class="col-4">
-                <input id="schoolName" class="form-control mr-sm-2" type="text" placeholder="School name"></input></div>
-                <div class="col-4">
-                <input id="autocomplete" class="form-control mr-sm-2" placeholder="Enter your address"
-                       onFocus="geolocate()" type="text"></input></div>
-                       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton2">Submit</button>
-              </div>
-        <span id="teamLogo"></span>
+    <div class="container">
+        <div class="col-md-6">
+            <div class="container" id="searchSchool"> 
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" placeholder="Search Your School's City" id="userInput">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton"> Search</button>
+                </form>
+            </div>
+            <div class="container" id="addSchool">
+                <button class="btn btn-outline-dark my-2 my-sm-0 addSchool" type="text"> Add Your School </button>
+                    <div id="locationField" class="row">
+                        <div class="col-4">
+                            <input id="schoolName" class="form-control mr-sm-2" type="text" placeholder="School name"></input>
+                        </div>
+                        <div class="col-4">
+                            <input id="autocomplete" class="form-control mr-sm-2" placeholder="Enter your address"
+                            onFocus="geolocate()" type="text"></input>
+                        </div>
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton2">Submit</button>
+                    </div>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+                <span id="teamLogo"></span>
+        </div>
     </div>
     </nav>
 </header>
 
 <body>
-
+        <div class="container">
         <div class="jumbotron" id="teamLocals">  
             <h1 class="display-3"> Guide 2 Gameday </h1> 
-                <p class="lead"> Search your BIG12 school by city to find relevant gameday information, below is a list of BIG12 schools by city. </p> 
+                <p class="lead"> <h3>About: </h3>
+                    Guide 2 Gameday allows you to search your BIG12 school by city to find relevant gameday information, below is a list of BIG12 schools by city. 
+                    If you are interested in a school outside of the BIG12 just click the add school button above to find
+                    gameday information by address. </p> 
                 <hr class="my-2">
                 <p class="lead"> 
                     <strong>Baylor University</strong>: Waco, Texas <br> 
@@ -51,34 +65,38 @@
                     <strong>West Virginia University</strong>: Morgantown, West Virginia <br>
                 </p> 
         </div>
-    <div class="container">
-        <div class="row" id="geoInfo">
+        </div>
+    
+        <div id="geoInfo">
            
-            <div class="col-md-3" id="weatherInfo">
+            <div  id="weatherInfo">
                 <div class="card">
                     <div class="card-block">
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                                <div class="col-md-6">
+
                                     <div class="row"> <h1><span id="weatherCity"></span></h1> </div>
                                     <div class="row" id="weatherContent">
                                         <em><div id="weatherCondition"></div></em>
                                         <div id="weatherIcon"></div>
                                     </div>
                                     <div class="row"><h3><div id="weatherTemp"></div></h3></div>
-                                </div>
-                            <div class="col-md-3"></div>
-                        
-                        </div>
-                    </div>
                 </div>
             </div>
-            <div class= "col-7"id="maps">  <!-- id for the maps api -->
-            
             </div>
-        </div>
+            </div>
+           
+
+            <div class="container">
+            <hr><hr>
+            </div>
+            
+            
+            <div class="container">
+            <div class="row">
+            <div class="col-md-12" id="maps">  <!-- id for the maps api -->
+            </div>
+            </div>
+            </div>
         
-    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

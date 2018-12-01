@@ -2,7 +2,9 @@ header {
     background-color: darkgray;
 }
 
-
+body {
+    background-color: black;
+}
 .navbar-brand {
     float: left;
     padding-top: 15px;
@@ -14,7 +16,9 @@ header {
     margin: 30px;
 }
 
-
+#weatherCondition {
+    float: left;
+}
 #weatherPic {
     height: 35px;
     width: 35px;
@@ -22,6 +26,10 @@ header {
 
 #geoInfo {
     margin-top: 50px;
+}
+
+img {
+    display: none;
 }
 
 #teamLocals {
@@ -35,3 +43,23 @@ header {
     width: 400px;  
     display: none;
     }
+
+#searchSchool {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#addSchool {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#emess {
+    border: 1px solid red;
+    font-style: italic;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #ffffff;
+}

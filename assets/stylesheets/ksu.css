@@ -27,18 +27,23 @@ hr {
     border: hidden;
     margin: 30px;
 }
-#maps {
-    height:500px;
-    width:500px;
+
+#weatherCity {
+    font-size: 50px;
 }
 
+
 #weatherPic {
-    height: 35px;
-    width: 35px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 #geoInfo {
-    margin-top: 50px;
+    margin: 0 auto;
+    margin-left: 45%;
 }
 
 #teamLocals {
@@ -46,18 +51,35 @@ hr {
     color: white;
 }
 
+
+
+#weatherContent {
+    margin-left: 25px;
+}
+
+#weatherTemp {
+    margin-left: 35px;
+}
+
 img {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: -50px;
+}
+#maps {
+    height:500px;
+    width:500px;
 }
 
-
-#weatherContent, #weatherTemp {
-    margin-left: 7px;
+#searchSchool {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-#teamLogo {
-    margin-right: 45%;
+#addSchool {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 990px) {
