@@ -1,0 +1,83 @@
+body {
+    background-color: #512888;
+    color: #A7A7A7;
+}
+
+nav {
+    background-color: #A7A7A7;
+    color: #512888;
+}
+
+.card-header {
+    background-color: #A7A7A7;
+    color: #512888;
+}
+
+hr {
+    border: 1px solid #A7A7A7;
+}
+
+.navbar-brand {
+    float: left;
+    padding-top: 15px;
+}
+.card {
+    height: 200px;
+    display: none;
+    border: hidden;
+    margin: 30px;
+}
+
+#weatherCity {
+    font-size: 50px;
+}
+
+
+#weatherPic {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#geoInfo {
+    margin: 0 auto;
+    margin-left: 45%;
+}
+
+#teamLocals {
+    background-color: black;
+    color: white;
+}
+
+
+
+#weatherContent {
+    margin-left: 25px;
+}
+
+#weatherTemp {
+    margin-left: 35px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: -50px;
+}
+#maps {
+    height:500px;
+    width:500px;
+}
+
+#searchSchool {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#addSchool {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
