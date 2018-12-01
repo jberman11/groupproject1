@@ -136,7 +136,6 @@ $("#searchButton").on("click", function() {
         $(".card").css("display", "none");
         eMessageBox = $("<div>");
         eMessageBox.attr("id", "emess")
-        eMessageBox.addClass("container");
         eMessage = $("<h1>");
         eMessage.html("I'm sorry there is no BIG12 school in " + school + " ,please try your search again.");
         $("#teamLocals").show();
@@ -187,6 +186,7 @@ var placeSearch, autocomplete;
       };
       $(".addSchool").on("click", function() {
         $("#locationField").show()
+        $(".addSchool").remove();
       })
       function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
