@@ -1,16 +1,16 @@
 body {
-    background-color: white;
-    color: black;
+    background-color: lightgray;
+    color: grey;
 }
 
 nav {
-    background-color: black;
-    color: white;
+    background-color: grey;
+    color:black;
 }
 
 .card-header {
-    background-color: black;
-    color: white;
+    background-color: grey;
+    color: black;
 }
 
 hr {

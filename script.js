@@ -433,7 +433,7 @@ function check (school){
         $("#teamLogo").html(tLogo);
         $("#emess").remove();
     } else {
-        $("#stylesheet1").attr("href", "./assets/stylesheets/kansas.css");
+        $("#stylesheet1").attr("href", "./assets/stylesheets/newschool.css");
         var tLogo = $("<img>");
         tLogo.empty()
         tLogo.attr("alt", "University of Kansas Team Logo");
